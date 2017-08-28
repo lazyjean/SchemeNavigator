@@ -1,0 +1,23 @@
+{
+  "name": "SchemeNavigator",
+  "version": "0.1.0",
+  "summary": "简单的路由框架",
+  "description": "简单的路由框架",
+  "homepage": "https://github.com/liuzhen/SchemeNavigator",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liuzhen": "lazy66@me.com"
+  },
+  "source": {
+    "git": "https://github.com/liuzhen/SchemeNavigator.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SchemeNavigator/**/*",
+  "public_header_files": "SchemeNavigator/**/*.h"
+}

@@ -1,0 +1,6 @@
+framework module SchemeNavigator {
+  umbrella header "SchemeNavigator-umbrella.h"
+
+  export *
+  module * { export * }
+}

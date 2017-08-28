@@ -1,0 +1,21 @@
+PODS:
+  - SchemeNavigator (0.1.0)
+  - TOWebViewController (2.2.6):
+    - TOWebViewController/Core (= 2.2.6)
+  - TOWebViewController/Core (2.2.6)
+
+DEPENDENCIES:
+  - SchemeNavigator (from `../`)
+  - TOWebViewController
+
+EXTERNAL SOURCES:
+  SchemeNavigator:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SchemeNavigator: 5787315bb3f32c1bd065c4ac57a051934c78f719
+  TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
+
+PODFILE CHECKSUM: 38635b52cbcb629cd8052633a1d85dba146fdc69
+
+COCOAPODS: 1.3.1
