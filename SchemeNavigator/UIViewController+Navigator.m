@@ -58,6 +58,7 @@
                             value = @([(NSString *)value longLongValue]);
                         }
                     }
+                    //尝试转换url
                     else if (strcmp(type_coding, "@\"NSURL\"") == 0) {
                         value = [NSURL URLWithString:value];
                     }
@@ -102,13 +103,17 @@
         UITabBarController *tab = (UITabBarController *)top;
         top = [tab selectedViewController];
     }
-
     //如果是NavigationController，则取visibleViewController为top
-    if ([top isKindOfClass:[UINavigationController class]]) {
+    else if ([top isKindOfClass:[UINavigationController class]]) {
         UINavigationController *nav = (UINavigationController *)top;
         top = [nav visibleViewController];
     }
-    
+    else {
+        UIViewController *target = [top targetViewControllerForAction:@selector(showViewController:sender:) sender:nil];
+        if (target) {
+            top = target;
+        }
+    }
     return top;
 }
 
