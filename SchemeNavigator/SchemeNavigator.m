@@ -75,7 +75,8 @@ static char HostKey;
     if ([components.scheme isEqualToString:self.scheme]) {
         UIViewController *source = [UIViewController findTop];
         UIViewController *destination = [self createControllerWithURLComponents:components];
-        [self showFrom:source to:destination];
+//        [self showFrom:source to:destination];
+        [[UIApplication sharedApplication].keyWindow.rootViewController showViewController:destination sender:nil];
     }
     else if ([components.scheme isEqualToString:@"http"] ||
              [components.scheme isEqualToString:@"https"]) {
@@ -85,7 +86,8 @@ static char HostKey;
 
         if (self.createWebBrowser) {
             destination = self.createWebBrowser(url);
-            [self showFrom:source to:destination];
+//            [self showFrom:source to:destination];
+            [[UIApplication sharedApplication].keyWindow.rootViewController showViewController:destination sender:nil];
         }
         else {
             destination = [[SFSafariViewController alloc] initWithURL:url];
