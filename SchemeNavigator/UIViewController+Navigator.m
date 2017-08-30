@@ -98,22 +98,10 @@
 
     UIViewController *top = root;
 
-    //如果是TabBar，则当前选中的为top
-    if ([top isKindOfClass:[UITabBarController class]]) {
-        UITabBarController *tab = (UITabBarController *)top;
-        top = [tab selectedViewController];
+    while ([top topController]) {
+        top = [top topController];
     }
-    //如果是NavigationController，则取visibleViewController为top
-    else if ([top isKindOfClass:[UINavigationController class]]) {
-        UINavigationController *nav = (UINavigationController *)top;
-        top = [nav visibleViewController];
-    }
-    else {
-        UIViewController *target = [top targetViewControllerForAction:@selector(showViewController:sender:) sender:nil];
-        if (target) {
-            top = target;
-        }
-    }
+
     return top;
 }
 
