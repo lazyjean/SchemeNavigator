@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SchemeNavigator'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = '简单的路由框架'
   s.description      = <<-DESC
 简单的路由框架,方便实现后台下发一个跳转地址，app端实现页面的跳转

@@ -119,7 +119,7 @@
     }
 
     UIViewController *target = [self targetViewControllerForAction:@selector(showViewController:sender:) sender:nil];
-    if (target) {
+    if (target && target != self.navigationController) {
         return target;
     }
 
