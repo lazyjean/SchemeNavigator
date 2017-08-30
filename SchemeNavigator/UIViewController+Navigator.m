@@ -117,5 +117,25 @@
     return top;
 }
 
+- (UIViewController *)topController {
+    if ([self isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tab = (UITabBarController *)self;
+        return tab.selectedViewController;
+    }
+    else if ([self isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *nav = (UINavigationController *)self;
+        return [nav visibleViewController];
+    }
+    else if (self.presentedViewController) {
+        return self.presentedViewController;
+    }
+
+    UIViewController *target = [self targetViewControllerForAction:@selector(showViewController:sender:) sender:nil];
+    if (target) {
+        return target;
+    }
+
+    return nil;
+}
 
 @end
