@@ -73,7 +73,7 @@ static char HostKey;
     NSURLComponents *components = [self jumpURLCompoentsWithURL:url];
 
     if ([components.scheme isEqualToString:self.scheme]) {
-        UIViewController *source = [UIViewController findTop];
+//        UIViewController *source = [UIViewController findTop];
         UIViewController *destination = [self createControllerWithURLComponents:components];
 //        [self showFrom:source to:destination];
         [[UIApplication sharedApplication].keyWindow.rootViewController showViewController:destination sender:nil];
