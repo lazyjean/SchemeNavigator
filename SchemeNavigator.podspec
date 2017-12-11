@@ -8,16 +8,16 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SchemeNavigator'
-  s.version          = '0.3.1'
+  s.version          = '0.3.2'
   s.summary          = '简单的路由框架'
   s.description      = <<-DESC
 简单的路由框架,方便实现后台下发一个跳转地址，app端实现页面的跳转
                        DESC
 
-  s.homepage         = 'https://git.oschina.net/leeszi/SchemeNavigator'
+  s.homepage         = 'https://github.com/lazyjean/SchemeNavigator'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liuzhen' => 'lazy66@me.com' }
-s.source           = { :git => 'https://git.oschina.net/leeszi/SchemeNavigator.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/lazyjean/SchemeNavigator.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'SchemeNavigator/**/*'
   s.public_header_files = 'SchemeNavigator/**/*.h'
