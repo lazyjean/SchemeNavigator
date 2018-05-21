@@ -93,6 +93,9 @@ static char HostKey;
         }
     }
     else {
+        if (self.routeTo && self.routeTo(url)) {
+            return;
+        }
         [self routeToAppOpenURL:url];
     }
 }

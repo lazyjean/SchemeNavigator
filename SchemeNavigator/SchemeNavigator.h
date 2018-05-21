@@ -16,6 +16,11 @@
 
 @property (nonatomic, copy) UIViewController *(^createWebBrowser)(NSURL *url);
 
+/*
+ * 当SchemeNavigator无法处理当前的时，会调用这个回调尝试处理
+ **/
+@property (nonatomic, copy) BOOL (^routeTo)(NSURL *url);
+
 + (instancetype)sharedNavigator;
 
 //设定scheme
